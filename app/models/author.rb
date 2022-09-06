@@ -10,6 +10,6 @@ class Author < ActiveRecord::Base
     # method chaining
     # author.posts.first.title
 #  has many categories through posts
-    has_many :categories through: :posts
+    has_many :categories, through: :posts
 
 end
