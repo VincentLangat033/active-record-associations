@@ -73,6 +73,10 @@ class AuthorsController < ApplicationController
         # flash[]
         #    invalid log in
         # use flash messages
+        else 
+            flash[:error] = "invalid login"
+
+        end
 
 
         # redirect to '/login'
