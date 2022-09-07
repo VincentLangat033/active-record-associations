@@ -50,6 +50,8 @@ class PostsControllers < ApplicationController
 #  retrieve the object
 # autofill a form with the details of that object
 # render to our user to fill
+
+
     end
     patch '/posts/:id' do 
         # no view
