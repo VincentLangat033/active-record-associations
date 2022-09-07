@@ -70,9 +70,10 @@ class AuthorsController < ApplicationController
         # redirect 
         redirect '/posts'
         # else
+        # flash[]
         #    invalid log in
         # use flash messages
-        
+
 
         # redirect to '/login'
     
