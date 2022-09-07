@@ -66,6 +66,11 @@ erb :"/posts/edit"
     end
     delete '/posts/:id' do 
 # no view to render
+# get_post
+@post = Post.find_by(id:params[:id])
+@post.destroy
+redirect '/posts'
+
     end
 
 end

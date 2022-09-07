@@ -8,6 +8,11 @@ class ApplicationController < Sinatra::Base
         # 'Hello world'
 
     end
+    # helpers do
+    #     def get_post
+    #         @post = Post.find_by(id:params[:id])
+    #     end
+    # end
       
 
 
