@@ -28,8 +28,20 @@ class PostsControllers < ApplicationController
 
     end
     post '/posts' do 
+         # binding.pry
         # create new post
-        # redirect our user somewhere
+        # @post = Post.new(title: params[:title], content: params[:content])
+        # @post = Post.new(params)
+        # @post.new
+        # use create and persist at the same time
+
+        @post = Post.create(params)
+          # redirect our user somewhere
+        redirect "/posts/#{@post.id}"
+
+       
+       
+      
 
     end
    

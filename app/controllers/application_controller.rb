@@ -3,7 +3,16 @@ class ApplicationController < Sinatra::Base
         # set sessions
         set :views , 'app/views'
     end
+    get '/' do 
+        erb :welcome
+        # 'Hello world'
+
+    end
       
+
+
+
+
     # # A user just requested all posts
     # get '/posts' do 
     #     erb :index
