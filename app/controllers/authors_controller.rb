@@ -33,6 +33,7 @@ class AuthorsController < ApplicationController
             redirect '/signup'
         else
             author.save
+            session[:author_id] = author.id  # logging user in
             redirect '/posts'
 
     
@@ -52,13 +53,27 @@ class AuthorsController < ApplicationController
     # read action => querying author and reading author atribbutes
 
     get '/login' do  #render login form
-
+       erb :"authors/login"
     end
 
     post '/login' do  # process log in
+        # gather data from the form =>params
+        # find my author object
+        author = Author.find_by_username(params[:username])
+        # if author exists  && password is corrects
+        #    go ahead and login
+        # binding.pry
+        # redirect 
+        # else
+        #    invalid log in
+        # redirect to '/login'
+    
 
     end
 
     # logout
     # delete action => since it clears the sessions
 end
+
+# .find returns an error if it doesnot find it
+# .find_by_ attribute  use find by , this returns nill and not erro
