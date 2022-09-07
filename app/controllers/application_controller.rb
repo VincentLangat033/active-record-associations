@@ -2,8 +2,11 @@ class ApplicationController < Sinatra::Base
     configure do
         # set sessions
         set :views , 'app/views'
+        enable :sessions
+        set :session_secret, "secret"
     end
     get '/' do 
+        # binding.pry
         erb :welcome
         # 'Hello world'
 

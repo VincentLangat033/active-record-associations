@@ -11,5 +11,9 @@ class Author < ActiveRecord::Base
     # author.posts.first.title
 #  has many categories through posts
     has_many :categories, through: :posts
+    has_secure_password
+    # adds salt to our passwords
+    # what is salt?
+    # it is a randomized string
 
 end
