@@ -51,6 +51,14 @@ class AuthorsController < ApplicationController
     # login  '/login'
     # read action => querying author and reading author atribbutes
 
+    get '/login' do  #render login form
+
+    end
+
+    post '/login' do  # process log in
+
+    end
+
     # logout
     # delete action => since it clears the sessions
 end
