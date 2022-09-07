@@ -17,7 +17,7 @@ class PostsControllers < ApplicationController
         # retrieve the requested post
         # show details of that post
         # params = {"id"=> "1"}
-        @post = Post.find_by(params[:id])
+        @post = Post.find_by(id:params[:id])
         erb :'posts/show'
         # you cannot use conditonals
     #    if @post 
@@ -50,12 +50,18 @@ class PostsControllers < ApplicationController
 #  retrieve the object
 # autofill a form with the details of that object
 # render to our user to fill
+@post = Post.find_by(id:params[:id])
+erb :"/posts/edit"
 
 
     end
     patch '/posts/:id' do 
         # no view
         # update particular object with new attributes
+        @post = Post.find_by(id:params[:id])
+        @post.update(title: params[:title], content: params[:content])
+        redirect "/posts/#{@post.id}"
+
 
     end
     delete '/posts/:id' do 
