@@ -61,11 +61,19 @@ class AuthorsController < ApplicationController
         # find my author object
         author = Author.find_by_username(params[:username])
         # if author exists  && password is corrects
+        if author && author.authenticate(params[:password])
+            # authenticate method comes from bcrypt
         #    go ahead and login
+        # log in user
+        session[:author_id] = author.id
         # binding.pry
         # redirect 
+        redirect '/posts'
         # else
         #    invalid log in
+        # use flash messages
+        
+
         # redirect to '/login'
     
 
