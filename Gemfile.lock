@@ -75,6 +75,8 @@ GEM
     sinatra-activerecord (2.0.25)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    sinatra-flash (0.3.0)
+      sinatra (>= 1.0.0)
     sqlite3 (1.4.4)
     thin (1.8.1)
       daemons (~> 1.0, >= 1.0.9)
@@ -105,6 +107,7 @@ DEPENDENCIES
   rspec
   shotgun
   sinatra-activerecord
+  sinatra-flash
   sqlite3 (~> 1.4)
   thin
   tux

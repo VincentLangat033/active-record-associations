@@ -35,3 +35,4 @@ gem "shotgun"
 gem "thin"
 gem "tux"
 gem "bcrypt"
+gem 'sinatra-flash'
